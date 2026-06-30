@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            background:linear-gradient(135deg,#1e3c72,#2a5298);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .container{
+            width:900px;
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            display:flex;
+            box-shadow:0 15px 35px rgba(0,0,0,.3);
+        }
+
+        .left{
+            width:50%;
+            background:#0d6efd;
+            color:white;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            padding:40px;
+        }
+
+        .left h1{
+            font-size:40px;
+            margin-bottom:20px;
+        }
+
+        .left p{
+            text-align:center;
+            line-height:28px;
+            font-size:18px;
+        }
+
+        .right{
+            width:50%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            padding:40px;
+        }
+
+        .right h2{
+            color:#333;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            width:250px;
+            padding:15px;
+            margin:15px;
+            text-decoration:none;
+            color:white;
+            text-align:center;
+            border-radius:8px;
+            font-size:18px;
+            transition:.3s;
+        }
+
+        .login{
+            background:#28a745;
+        }
+
+        .login:hover{
+            background:#218838;
+        }
+
+        .register{
+            background:#007bff;
+        }
+
+        .register:hover{
+            background:#0056b3;
+        }
+
+        .footer{
+            margin-top:25px;
+            color:gray;
+            font-size:14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <h1>Task Management</h1>
+
+        <p>
+            Manage Projects<br>
+            Assign Tasks<br>
+            Track Progress<br>
+            Generate Reports
+        </p>
+
+    </div>
+
+    <div class="right">
+
+        <h2>Welcome</h2>
+
+        <a href="{% url 'login' %}" class="btn login">
+            Login
+        </a>
+
+        <a href="{% url 'register' %}" class="btn register">
+            Register
+        </a>
+
+        <div class="footer">
+            © 2026 Task Management System
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
